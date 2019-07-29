@@ -129,10 +129,10 @@ def gpf_localization(px, pw, xEst, PEst, z, u):
     PEst = calc_covariance(xEst, px, pw)
     PSqrt = scipy.linalg.sqrtm(PEst)
     for ip in range(NP):
-        px[0,ip] = xEst[0] + np.diag(PSqrt)[0] * np.random.randn()
-        px[1,ip] = xEst[1] + np.diag(PSqrt)[1] * np.random.randn()
-        px[2,ip] = xEst[2] + np.diag(PSqrt)[2] * np.random.randn()
-        px[3,ip] = xEst[3] + np.diag(PSqrt)[3] * np.random.randn()
+        px[0,ip] = xEst[0] + PSqrt[0][0] * np.random.randn()
+        px[1,ip] = xEst[1] + PSqrt[1][1] * np.random.randn()
+        px[2,ip] = xEst[2] + PSqrt[2][2] * np.random.randn()
+        px[3,ip] = xEst[3] + PSqrt[3][3] * np.random.randn()
 
     return xEst, PEst, px, pw
 
