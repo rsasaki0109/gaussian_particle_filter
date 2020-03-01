@@ -2,9 +2,16 @@
 ~~~
 python gaussian_particle_filter.py
 ~~~
+
 ## Result  
 
-![demo](./gpf.gif)  
+![demo](./images/gpf.gif)  
+
+## Detail
+
+![demo](./images/Symbol.PNG)  
+
+![demo](./images/ALgorithm.PNG)  
 
 ## Reference  
 katayama,"Non-linearity Kalman Filter",2011,p152-p155(in Japanse)  
